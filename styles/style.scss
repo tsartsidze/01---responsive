@@ -1,0 +1,82 @@
+// privates clases
+%container {
+    max-width: 980px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+body {
+    font-size: 1.125rem;
+    .container {
+        @extend %container;
+        img {
+            width: 100%;
+        }
+        h1 {
+            font-family: "ninoBold";
+            font-size: 3rem;
+            font-weight: bold;
+            color: #212614;
+            text-align: center;
+            margin: 0.4em auto 0.6em auto;
+            span {
+                color: #b7832f;
+            }
+        }
+        .columns {
+            .col {
+                h2 {
+                    font-family: "ninoBold";
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: 0.3em;
+                }
+                p {
+                    line-height: 1.2em;
+                }
+            }
+        }
+    }
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+.col-bg {
+    background: #212614;
+    padding: 0.5em;
+    color: #fff;
+}
+.col-1 {
+    width: 20%;
+}
+.col-2 {
+    width: 50%;
+}
+.col-3 {
+    width: 75%;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 0 0.3em 0.3em 0.3em;
+        .columns {
+            flex-direction: column;
+        }
+        .col-1,
+        .col-2,
+        .col-3 {
+            width: 100%;
+            margin: 0.4em auto;
+        }
+        h2 {
+            margin-bottom: 0.2em;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+    
+}
